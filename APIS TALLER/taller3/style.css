@@ -1,0 +1,11 @@
+#pokemonCard .card {
+    min-width: 350px;
+    max-width: 400px;
+}
+body {
+    background-image: url('src/cute-yellow-mouse-character-background-free-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes Locales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-images"></i> Galería de Imágenes Locales</h1>
+            <p>Explora las imágenes de tu colección personal</p>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-card">
+                <span class="stat-number" id="totalPhotos">0</span>
+                <span class="stat-label">Fotos Cargadas</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="totalAlbums">0</span>
+                <span class="stat-label">Álbumes</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar por título..." class="search-input">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="buttons-container">
+                <button class="btn btn-primary" onclick="loadPhotos(5)">
+                    <i class="fas fa-image"></i> 5 Fotos
+                </button>
+                <button class="btn btn-primary" onclick="loadPhotos(10)">
+                    <i class="fas fa-images"></i> 10 Fotos
+                </button>
+                <button class="btn btn-secondary" onclick="clearGallery()">
+                    <i class="fas fa-trash"></i> Limpiar
+                </button>
+            </div>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <div>Cargando imágenes...</div>
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div id="gallery" class="gallery"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
